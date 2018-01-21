@@ -78,7 +78,6 @@ body {
 }
 a {
   -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
   transition: 0.3s;
   color: #313131;
 }
@@ -114,6 +113,7 @@ input[type="name"], input[type="email"], input[type="number"], input[type="tel"]
   color: #fff;
   padding: 15px 30px;
   border: none;
+  -webkit-transition: .3s;
   transition: .3s;
   border-radius: 5px;
   display: inline-block;
@@ -137,6 +137,7 @@ a.boxed-btn:hover {
   padding-left: 5px;
 }
 .inline-btn i.fa {
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .padding-top-0{
@@ -153,14 +154,18 @@ Search Bar CSS
   z-index: 5;
   visibility: hidden;
   opacity: 0;
-  transform: scale(.8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transform: scale(.8);
+          transform: scale(.8);
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .search-box-inner {
   position: absolute;
   width: 100%;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .search-box-inner .logo a{
   background: #333;
@@ -200,17 +205,26 @@ Search Bar CSS
   text-align: center;
   top: 0;
   font-size: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
+  -webkit-transition: .3s;
   transition: .3s;
   z-index: 9;
 }
 .search-box.active {
   visibility: visible;
   opacity: 1;
-  transform: none;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-transform: none;
+          transform: none;
 }
 /*==========================================
 background images CSS
@@ -254,6 +268,7 @@ Header CSS
   list-style: none;
 }
 .main-menu li {
+  -webkit-transition: .3s;
   transition: .3s;
   display: inline-block;
   position: relative;
@@ -298,7 +313,9 @@ Main menu CSS
   background-color: #00cf7f;
   width: 200px;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   visibility: hidden;
+  -webkit-transition: .3s;
   transition: .3s;
   left: 0;
   top: 70px;
@@ -313,6 +330,7 @@ Main menu CSS
 .main-menu li:hover ul {
   visibility: visible;
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   top: 50px;
 }
 .main-menu li:nth-child(7) ul {
@@ -344,8 +362,12 @@ hero area CSS
   background-color: #00cf7f;
   z-index: 1;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 100px 0;
 }
 .hero-area:after {
@@ -358,6 +380,7 @@ hero area CSS
   content: "";
   z-index: -1;
   opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 .admission-form {
   background: #fff;
@@ -378,11 +401,20 @@ hero area CSS
   margin-bottom: 30px;
 }
 .hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
-  align-items: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 .hero-text h1 {
   font-size: 48px;
@@ -492,10 +524,20 @@ course details CSS
   height: 170px;
   width: 170px;
   margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
   transition: .3s;
   padding: 30px;
 }
@@ -546,6 +588,7 @@ call to action CSS
   content: "";
   z-index: -1;
   opacity: .3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 }
 .cta-area h4{
   margin-bottom: 0;
@@ -595,7 +638,8 @@ call to action CSS
   border: 1px solid #10b6a7;
   top: 50%;
   right: 15px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .boxed-btn.bg-2 {
   background-color: #00cf7f;
@@ -603,6 +647,7 @@ call to action CSS
 .cta-area.about-cta:after {
   background-color: #011614;
   opacity: .7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 /*==========================================
 Section title CSS
@@ -737,6 +782,7 @@ about CSS
 }
 .counter-box-wrapper .bordered-box {
   padding: 20px;
+  -webkit-transition: .3s;
   transition: .3s
 }
 .counter-box-wrapper .bordered-box:hover {
@@ -784,10 +830,12 @@ courses CSS
 .courses .inline-btn i.fa {
   visibility: hidden;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .courses .inline-btn:hover i.fa {
   visibility: visible;
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 .courses .inline-btn:hover {
   color: #313131;
@@ -816,6 +864,7 @@ courses CSS
 }
 .courses .service-description h4 {
   color: #313131;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .courses .bordered-box:hover h4 {
@@ -976,6 +1025,7 @@ FAQ CSS
     line-height: 40px;
     text-align: center;
     margin-top: -20px;
+    -webkit-transition: .2s;
     transition: .2s;
 }
 
@@ -991,5 +1041,6 @@ FAQ CSS
 }
 
 .faq-heading[aria-expanded="true"]:before {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
